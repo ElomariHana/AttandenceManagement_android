@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Presence</string>
+    <string name="newClass">Create your class</string>
+    <string name="deleteClass">Write ID of class to delete</string>
+    <string name="updateClass">Write elements to update</string>splash
+    <string name="splash">Welcome to Presence</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="button_sign_in">Sign in</string>
+    <string name="text_signin_message">Class Management</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Logout</string>
+</resources>

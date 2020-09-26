@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/drawer_layout"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fitsSystemWindows="true" tools:openDrawer="start" tools:context=".DeleteClass">
+
+    <include layout="@layout/app_bar_main" android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.NavigationView android:id="@+id/nav_view"
+        android:layout_width="wrap_content" android:layout_height="match_parent"
+        android:layout_gravity="start" android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main" app:menu="@menu/activity_main_drawer" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="321dp"
+            android:layout_height="277dp"
+            android:layout_marginLeft="40dp"
+
+            android:layout_marginRight="40dp"
+            android:text="@string/deleteClass"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/idClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:hint="Id"
+            />
+
+
+        <Button
+            android:id="@+id/DeleteCl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="?android:attr/textSelectHandleLeft"
+            android:text="Supprimer"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

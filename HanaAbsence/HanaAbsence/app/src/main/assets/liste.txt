@@ -1,0 +1,43 @@
+1 JE1725 AIT_TALGHALIT ISMAIL
+2 JH36266 ARGANE ZAHRA
+3 I42622 AZDAGAZ FATIMA
+4 JC45622 AZZOUZI NAJLAA
+5 JY53255 BANIKACEM IMANE
+6 WC58166 BARRY MAMADOU_HADY
+ List<Etudiant> etudiants = new ArrayList<Etudiant>();
+
+        try
+        {
+            //lu à partir de data/data etc.
+          //  InputStream instream = this.openFileInput("liste.txt");
+            InputStream instream = getAssets().open("maaster.txt");
+
+            InputStreamReader inputreader = new InputStreamReader(instream);
+            BufferedReader buffreader = new BufferedReader(inputreader);
+            StringBuilder out = new StringBuilder();
+            String line;
+            String tmp;
+            String[] champs;
+            while (( line = buffreader.readLine()) != null)
+            {
+                out = new StringBuilder();
+                out.append(line);
+                tmp = out.toString();
+                champs = tmp.split(" ");
+                int id = Integer.parseInt(champs[0]);
+                etudiants.add(new Etudiant(id,champs[1],champs[2],champs[3]));
+
+
+            }
+            Toast.makeText(Menu.this,"la liste est bien chargée" ,
+                    Toast.LENGTH_LONG).show();
+            instream.close();
+        }
+        catch (Exception e)
+        {
+            Toast.makeText(Menu.this,e.getMessage() ,
+                    Toast.LENGTH_LONG).show();
+        }
+
+        return etudiants;
+    }

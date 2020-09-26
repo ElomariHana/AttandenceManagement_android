@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DateAbsenceForEveryStudent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/BurlyWood"
+        android:orientation="vertical"
+        android:layout_marginTop="0dp">
+
+        <TextView
+            android:id="@+id/TVTitre"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:background="@color/Gray"
+            android:text="Dates des absences pour l'étudiant: "
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+
+        <ListView
+            android:id="@+id/ListViewInfoEtudiant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"></ListView>
+
+        <ListView
+            android:id="@+id/ListViewAbsDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/BurlyWood"
+            ></ListView>
+
+
+    </LinearLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/drawer_layout"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fitsSystemWindows="true" tools:openDrawer="start" tools:context=".Home">
+
+    <include layout="@layout/app_bar_main" android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.NavigationView android:id="@+id/nav_view"
+        android:layout_width="wrap_content" android:layout_height="match_parent"
+        android:layout_gravity="start" android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main" app:menu="@menu/activity_main_drawer" />
+
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/updCl"
+        android:layout_width="437dp"
+        android:layout_height="46dp"
+        android:background="?android:attr/textSelectHandleRight"
+        android:text="modifier classe"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/DelCl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.733"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/DelCl"
+        android:layout_width="417dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="20dp"
+        android:text="Supprimer classe"
+        android:textColor="#FFFFFF"
+        android:background="?android:attr/textSelectHandleLeft"
+        app:layout_constraintBottom_toTopOf="@+id/ListViewCl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/NewCl"
+        android:layout_width="417dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="136dp"
+        android:background="?android:attr/textSelectHandleLeft"
+        android:text="Nouvelle classe"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/updCl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.692"
+        tools:ignore="MissingConstraints" />
+
+    <ListView
+        android:id="@+id/ListViewCl"
+        android:layout_width="414dp"
+        android:layout_height="341dp"
+        android:background="@color/WhiteSmoke"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"></ListView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="355dp"
+        android:layout_height="41dp"
+        android:text="Attandence Management "
+        android:textColor="#FFFEFE"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/NewCl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.035" />
+
+
+</android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.DrawerLayout>
